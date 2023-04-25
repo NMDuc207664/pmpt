@@ -6,7 +6,9 @@ public class CommanderMovement : MonoBehaviour
 {
     // All the require Components
     [SerializeField] public Collider2D collision;
+    [SerializeField] public GameObject GroundChecker;
     public HealthDecrease health;
+    //public CommanderAttack atk;
     private Rigidbody2D rb2D;
     private Animator  anim;
     private SpriteRenderer characterSprite;
@@ -41,7 +43,9 @@ public class CommanderMovement : MonoBehaviour
         UpdateAnimationMove();
         if(health.die == true){
             DeCollision();
+            deGround();
         }
+        //Debug.Log(atk.isblock);
     }
 
     #region Movement
@@ -135,6 +139,9 @@ public class CommanderMovement : MonoBehaviour
 
     public void DeCollision(){
         collision.enabled = false;
+    }
+    public void deGround(){
+        GroundChecker.SetActive(false);
     }
 
     #endregion

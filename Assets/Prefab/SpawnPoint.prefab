@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792e9754ca223f548b2c91fc270a3d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character1: {fileID: 8924253758435279712, guid: 2c51b5926d87d43458e94c3c01fb5d93, type: 3}
-  character2: {fileID: 8627905277317881743, guid: 409139ae5d7ca004f9035fc4f805007c, type: 3}
-  health1: {fileID: 2572241465636923493, guid: 2c51b5926d87d43458e94c3c01fb5d93, type: 3}
-  health2: {fileID: 8563865003642271477, guid: 409139ae5d7ca004f9035fc4f805007c, type: 3}
+  character1: {fileID: 5517154732325256917, guid: acf2f0f68756a5b46a2bf4634aea683a, type: 3}
+  character2: {fileID: 9142560761231689647, guid: 5addcd0ad81565f48a4146020f9685c3, type: 3}
+  health1: {fileID: 1512048948061656528, guid: acf2f0f68756a5b46a2bf4634aea683a, type: 3}
+  health2: {fileID: 9188585040552718037, guid: 5addcd0ad81565f48a4146020f9685c3, type: 3}

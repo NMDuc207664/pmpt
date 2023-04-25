@@ -7,9 +7,15 @@ public class CommanderAttack : MonoBehaviour
     [SerializeField] private GameObject lightHitboxC1;
     [SerializeField] private GameObject lightHitboxC2;
     [SerializeField] private GameObject heavyHitboxC;
+    
+    [SerializeField] private GameObject BlockingC;
+    public HealthDecrease health;
     // All the require Components
     [HideInInspector] public Animator anim; 
     private float moveHorizontal;
+
+    public bool isblock;
+    //public static bool isatk;
 
     [Header("Ground Checker")]
     [SerializeField] private BoxCollider2D checkCollision;
@@ -70,7 +76,6 @@ public class CommanderAttack : MonoBehaviour
     private float nextTimeAttack1 = 0f;
     private float nextTimeAttack2 = 0f;
 
-
     // Trigger the light attack hurtbox in animation event
     private void LightAttack()
     {
@@ -105,32 +110,54 @@ public class CommanderAttack : MonoBehaviour
     public void deActivateLatk3(){
         heavyHitboxC.SetActive(false);
     }
+    public void ActiveBlocking(){
+        BlockingC.SetActive(true);
+    }
+    public void deBlocking(){
+        BlockingC.SetActive(false);
+    }
     public void deActivateAllatk(){
         lightHitboxC1.SetActive(false);
         lightHitboxC2.SetActive(false);
         heavyHitboxC.SetActive(false);
+        BlockingC.SetActive(false);
     }
 
     private void UpdateAnimationAttack()
     {
         // If the player in on the ground and trigger then attack
-        if (Input.GetButtonDown("LightAttack") && isGround() && !isAttacking1)
+        if (isGround() && !isAttacking1)
         {
-            // Deylay time between attack so player don't spam
-            if (Time.time >= nextTimeAttack1) 
-            {
-                isAttacking1 = true;
+            if(Input.GetButtonDown("LightAttack")){
+                if (Time.time >= nextTimeAttack1) 
+                {
+                    isAttacking1 = true;
+                }
+                deActivateAllatk(); 
             }
-            deActivateAllatk(); 
         }
         
-        if (Input.GetButtonDown("HeavyAttack") && isGround())
+        if (isGround())
         {
-            if (Time.time >= nextTimeAttack2)
-            {
-                isAttacking2 = true;
+            if(Input.GetButtonDown("HeavyAttack")){
+                if (Time.time >= nextTimeAttack2)
+                {
+                    isAttacking2 = true;
+                }
+                deActivateAllatk();
             }
-            deActivateAllatk();
+        }
+        if (isGround() && health.die == false){
+            if (Input.GetKey(KeyCode.L)){
+                isblock = true;
+                anim.SetBool("isblock", isblock);
+                ActiveBlocking();
+            }
+            else{
+                isblock = false;
+                anim.SetBool("isblock", isblock);
+                deBlocking();
+            }
         }
 
     }
