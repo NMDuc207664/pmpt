@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.6261263, y: -0.5855598}
+  m_Offset: {x: 1.0392494, y: -0.37770754}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8649354, y: 0.8295642}
+  m_Size: {x: 2.0386891, y: 0.41385972}
   m_EdgeRadius: 0
 --- !u!50 &3805206199875324999
 Rigidbody2D:
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8627905277102545843}
   - component: {fileID: 8627905277102545842}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground Check C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,10 +345,9 @@ MonoBehaviour:
   jumpableGround:
     serializedVersion: 2
     m_Bits: 8
-  enermyname: commanderb
-  attack1Rate: 0.5
+  attack1Rate: 0.64
   isAttacking1: 0
-  attack2Rate: 0.8
+  attack2Rate: 0.75
   isAttacking2: 1
 --- !u!114 &8563865003642271477
 MonoBehaviour:
@@ -363,8 +362,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1378165096577725641}
-  YourCharacter: {fileID: 1663290047546631423, guid: 45254361716bbf44abba349bf3c67692, type: 3}
-  SpawnPosition: {fileID: 9135323818529040333, guid: 826786c6b10db1346bef2e4bbb56f972, type: 3}
+  YourCharacter: {fileID: 8627905277317881743}
+  sp: {fileID: 3582098503937745727, guid: 826786c6b10db1346bef2e4bbb56f972, type: 3}
   ArcherH: 3
   CommanderH: 3.5
   AmountOfHealth: 0
@@ -432,7 +431,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.28378028}
+  m_Offset: {x: -0.6235566, y: 0.014795005}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -443,7 +442,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.5507692}
+  m_Size: {x: 2.2471132, y: 0.45295656}
   m_EdgeRadius: 0
 --- !u!50 &215347689069966505
 Rigidbody2D:

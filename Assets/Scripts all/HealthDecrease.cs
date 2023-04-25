@@ -10,7 +10,7 @@ public class HealthDecrease : MonoBehaviour
     public HealthBarBehavior healthBar;
    [SerializeField] private GameObject YourCharacter;
    //[SerializeField] private GameObject spawnpoint;
-   [SerializeField] private Transform SpawnPosition;
+    public Spawnpoint sp;
     public float ArcherH = 3f;
     public float CommanderH = 3.5f;
     public float AmountOfHealth;
@@ -59,9 +59,9 @@ public class HealthDecrease : MonoBehaviour
             healthBar.Health(AmountOfHealth);
          }
          else if (collision.tag == "Catk3"){
-            AmountOfHealth-=5.50f;
+            AmountOfHealth-=0.70f;
             DeadChecker(AmountOfHealth);
-            Debug.Log("-50 "+ AmountOfHealth);
+            Debug.Log("-70 "+ AmountOfHealth);
             healthBar.Health(AmountOfHealth);
          }
          else if (collision.tag == "Aatk1"){
@@ -83,7 +83,7 @@ public class HealthDecrease : MonoBehaviour
             healthBar.Health(AmountOfHealth);
          }
          else if (collision.tag == "Aarrow"){
-            AmountOfHealth-=7.700f;
+            AmountOfHealth-=0.70f;
             DeadChecker(AmountOfHealth);
             Debug.Log("-70 "+ AmountOfHealth);
             healthBar.Health(AmountOfHealth);
@@ -96,32 +96,20 @@ public class HealthDecrease : MonoBehaviour
             die = true;
             anim.SetTrigger("die");
             Debug.Log(die);
+            Invoke("Revive", 5);
+            Invoke("Destroy", 5);
         }
     }
     public void Destroy()
     {
-        if (die == true)
-        {
-            // if (collision.CompareTag("Archer"))
-            // {
-            //     die = false;
-            //     anim.SetTrigger("revive");
-            //     AmountOfHealth = 3.0f;
-            //     YourCharacter.transform.position = spawnpoint.transform.position;
-            //     Debug.Log(die);
-            // }
-            // else if (collision.CompareTag("Commander"))
-            // {
-            //     die = false;
-            //     anim.SetTrigger("revive");
-            //     AmountOfHealth = 3.5f;
-            //     YourCharacter.transform.position = spawnpoint.transform.position;
-            //     Debug.Log(die);
-            // }
-            die = false;
-            Destroy(gameObject);
-            Instantiate(YourCharacter,SpawnPosition.position,transform.rotation);
-            Debug.Log(die);
+        Destroy(gameObject);
+    }
+    public void Revive(){
+        if(collision.tag == "Archer"){
+            sp.RespawnArcher();
+        }
+        else  if(collision.tag == "Commander"){
+            sp.RespawnCommander();
         }
     }
 }

@@ -39,9 +39,9 @@ public class CommanderMovement : MonoBehaviour
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         controlMove();
         UpdateAnimationMove();
-        // if(health.die == true){
-        //     DeCollision();
-        // }
+        if(health.die == true){
+            DeCollision();
+        }
     }
 
     #region Movement

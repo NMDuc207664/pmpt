@@ -468,10 +468,6 @@ PrefabInstance:
       propertyPath: objectHealth
       value: 
       objectReference: {fileID: 1894398853}
-    - target: {fileID: 7750162187895776011, guid: 2c51b5926d87d43458e94c3c01fb5d93, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8924253758435279712, guid: 2c51b5926d87d43458e94c3c01fb5d93, type: 3}
       propertyPath: m_Name
       value: Archer
@@ -482,11 +478,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8924253758435279718, guid: 2c51b5926d87d43458e94c3c01fb5d93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.6900024
+      value: -14.43
       objectReference: {fileID: 0}
     - target: {fileID: 8924253758435279718, guid: 2c51b5926d87d43458e94c3c01fb5d93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7299957
+      value: 2.55
       objectReference: {fileID: 0}
     - target: {fileID: 8924253758435279718, guid: 2c51b5926d87d43458e94c3c01fb5d93, type: 3}
       propertyPath: m_LocalPosition.z

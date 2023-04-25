@@ -19,15 +19,11 @@ public class CommanderAttack : MonoBehaviour
 
     [Header("Layer Mask")]
     public LayerMask jumpableGround;
-    //private GameController gameController;
-    //[SerializeField] private string playername;
-    [SerializeField] private string enermyname;
 
     private void Start()
     {  
         anim = GetComponent<Animator>();
         deActivateAllatk();
-        //GameController.gameController.enemyName.text = enermyname;
     }
 
     // Update is called once per frame
@@ -54,12 +50,6 @@ public class CommanderAttack : MonoBehaviour
     }
     
     
-    // Show the hitbox on the screen
-    // private void OnDrawGizmosSelected()
-    // {
-    //     Gizmos.DrawWireSphere(attack1Point.position, attack1Range);
-    //     Gizmos.DrawWireCube(attack2Point.position, new Vector2(attack2Range, 1.7f));
-    // }
 
     #endregion
 
@@ -80,17 +70,6 @@ public class CommanderAttack : MonoBehaviour
     private float nextTimeAttack1 = 0f;
     private float nextTimeAttack2 = 0f;
 
-    // Check if attack hit to call debug
-    // private void AttackResult(Collider2D[] trigger)
-    // {
-    //     foreach (Collider2D enemy in trigger )
-    //     {
-    //         if (enemy.gameObject.layer == 6)
-    //         {
-    //             Debug.Log("Hit Sucesss");
-    //         } 
-    //     }
-    // }
 
     // Trigger the light attack hurtbox in animation event
     private void LightAttack()

@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.4912202, y: -0.42382985}
+  m_Offset: {x: 1.063289, y: -0.2526574}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3907752, y: 0.7458509}
+  m_Size: {x: 2.7357018, y: 0.40350604}
   m_EdgeRadius: 0
 --- !u!50 &4587547671394529056
 Rigidbody2D:
@@ -263,7 +263,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0060954094, y: -1.8874869}
+  m_Offset: {x: 0.0060954094, y: -1.8527489}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -274,7 +274,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6413984, y: 4.342618}
+  m_Size: {x: 1.6413984, y: 4.273142}
   m_EdgeRadius: 0
 --- !u!114 &8924253758435279717
 MonoBehaviour:
@@ -293,8 +293,8 @@ MonoBehaviour:
   checkCollision: {fileID: 8924253759128738084}
   rayBuffer: 0.2
   walkSpeed: 5
-  runSpeed: 10
-  jumpForce: 22
+  runSpeed: 13
+  jumpForce: 24
   jumpableGround:
     serializedVersion: 2
     m_Bits: 8
@@ -313,16 +313,17 @@ MonoBehaviour:
   lightHitboxC1: {fileID: 8924253759396039390}
   lightHitboxC2: {fileID: 3355095860241837695}
   heavyHitboxC: {fileID: 8924253758781269486}
+  health: {fileID: 2572241465636923493}
   anim: {fileID: 0}
   checkCollision: {fileID: 8924253759128738084}
   jumpableGround:
     serializedVersion: 2
     m_Bits: 8
-  attack1Rate: 0.3
+  attack1Rate: 0.32
   isAttacking1: 0
-  attack2Rate: 0.8
+  attack2Rate: 0.55
   isAttacking2: 1
-  rangeAttackRate: 1.5
+  rangeAttackRate: 1.8
   bowShoot: {fileID: 1780473028498869294}
   arrow: {fileID: 437638650354150489, guid: 81e8eb88ebb73f342b542edfd8dc859f, type: 3}
 --- !u!114 &2572241465636923493
@@ -338,9 +339,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 7750162187895776009}
-  YourCharacter: {fileID: 4672890928600271030, guid: ab50a25ca73a3c141b40a8c9204a3002, type: 3}
-  spawnpoint: {fileID: 0}
-  SpawnPosition: {fileID: 9135323818529040333, guid: 826786c6b10db1346bef2e4bbb56f972, type: 3}
+  YourCharacter: {fileID: 8924253758435279712}
+  sp: {fileID: 3582098503937745727, guid: 826786c6b10db1346bef2e4bbb56f972, type: 3}
   ArcherH: 3
   CommanderH: 3.5
   AmountOfHealth: 0
@@ -408,7 +408,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.2722087, y: 0}
+  m_Offset: {x: 0.69755816, y: -0.26898527}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -419,7 +419,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2160044, y: 1}
+  m_Size: {x: 2.3653054, y: 0.46202946}
   m_EdgeRadius: 0
 --- !u!50 &9093358297358919526
 Rigidbody2D:
@@ -452,7 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8924253759128738087}
   - component: {fileID: 8924253759128738084}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019870639, y: 0}
+  m_Offset: {x: -0.019870639, y: -0.416857}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -498,7 +498,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6097414, y: 1}
+  m_Size: {x: 1.6097414, y: 0.16628599}
   m_EdgeRadius: 0
 --- !u!1 &8924253759396039390
 GameObject:
@@ -546,7 +546,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8505541, y: -0.91511095}
+  m_Offset: {x: 1.2759038, y: -0.5972192}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -557,7 +557,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2072775, y: 1.0632334}
+  m_Size: {x: 2.356578, y: 0.42744994}
   m_EdgeRadius: 0
 --- !u!50 &4202562475114356597
 Rigidbody2D:

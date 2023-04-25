@@ -7,6 +7,8 @@ public class ArcherAttack : MonoBehaviour
     [SerializeField] private GameObject lightHitboxC1;
     [SerializeField] private GameObject lightHitboxC2;
     [SerializeField] private GameObject heavyHitboxC;
+
+    public HealthDecrease health;
     // All the require Components
     [HideInInspector] public Animator anim; 
     private float moveHorizontal;
@@ -47,27 +49,16 @@ public class ArcherAttack : MonoBehaviour
     }
     
     
-    // Show the hitbox on the screen
-    // private void OnDrawGizmosSelected()
-    // {
-    //     Gizmos.DrawWireSphere(attack1Point.position, attack1Range);
-    //     Gizmos.DrawWireCube(attack2Point.position, new Vector2(attack2Range, 1.7f));
-    // }
-
     #endregion
 
     #region Attack 
 
     [Header("Light Attack stats")]
     [SerializeField] private float attack1Rate = 0.5f;
-    // [SerializeField] private float attack1Range = 2.4f;
-    // [SerializeField] private Transform attack1Point;
     public bool isAttacking1 = false;
 
     [Header("Heavy Attack stats")]
     [SerializeField] private float attack2Rate = 0.8f;
-    // [SerializeField] private float attack2Range = 4f;
-    // [SerializeField] private Transform attack2Point;
     public bool isAttacking2 = true;
 
     [Header("Range Attack stats")]
@@ -78,18 +69,6 @@ public class ArcherAttack : MonoBehaviour
     private float nextTimeAttack1 = 0f;
     private float nextTimeAttack2 = 0f;
     private float nextTimeRange = 0f;
-
-    // Check if attack hit to call debug
-    // private void AttackResult(Collider2D[] trigger)
-    // {
-    //     foreach (Collider2D enemy in trigger )
-    //     {
-    //         if (enemy.gameObject.layer == 6)
-    //         {
-    //             Debug.Log("Hit Sucesss");
-    //         } 
-    //     }
-    // }
 
     // Trigger the light attack hurtbox in animation event
     private void LightAttack()
@@ -134,7 +113,7 @@ public class ArcherAttack : MonoBehaviour
             deActivateAllatk();
         }
 
-        if (Input.GetButtonDown("Range") && isGround())
+        if (Input.GetButtonDown("Range") && isGround() && health.die == false)
         {
             if (Time.time >= nextTimeRange)
             {
