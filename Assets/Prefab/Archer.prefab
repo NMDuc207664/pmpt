@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 5517154732325256925}
   - component: {fileID: 1512048948061656528}
   - component: {fileID: 885431720995457554}
+  - component: {fileID: 7024194278601098815}
   m_Layer: 6
   m_Name: Archer
   m_TagString: Archer
@@ -611,6 +612,19 @@ MonoBehaviour:
   healthDecrease: {fileID: 1512048948061656528}
   Orange: {fileID: 1128797220828547577, guid: b2755dd3d75c1f84eb7cb11b4ed34aec, type: 3}
   OrangeDrop: {fileID: 5517154732325256915}
+--- !u!114 &7024194278601098815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5517154732325256917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e23426eb0f53a4d88284a2643e0a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 1512048948061656528}
 --- !u!1 &8120081966115586979
 GameObject:
   m_ObjectHideFlags: 0
