@@ -12,7 +12,7 @@ public class WinTracker : MonoBehaviour
             orangerStatel = (int) data;
             if (orangerStatel > 0)
             {
-                Debug.Log("Player " + orangerStatel);
+                Debug.Log("Player have " + orangerStatel);
             }
             else
             {
