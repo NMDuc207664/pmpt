@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class ArcherMovement : MonoBehaviour
+public class ArcherMovement : NetworkBehaviour
 {
     // All the require Components
     [SerializeField] public Collider2D collision;
@@ -37,8 +38,12 @@ public class ArcherMovement : MonoBehaviour
 
     // Update is called once per frame
     private void Update()
-    {
+    {   
+        if (!IsOwner)   
+            return;
+
         moveHorizontal = Input.GetAxisRaw("Horizontal");
+
         if (health.isDie == false)
         {
             controlMove();
