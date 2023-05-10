@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1128797220828547574}
   - component: {fileID: 1128797220828547573}
   - component: {fileID: 1746433559419245222}
+  - component: {fileID: 5004002296837391680}
   m_Layer: 0
   m_Name: Orange
   m_TagString: Fruits
@@ -151,3 +152,19 @@ MonoBehaviour:
   PlayerDeath: {fileID: 0}
   hasPickUp: {fileID: 11400000, guid: 60ac6bb37f7d25a42adc1888b3798fcf, type: 2}
   hasDrop: {fileID: 11400000, guid: 60ac6bb37f7d25a42adc1888b3798fcf, type: 2}
+--- !u!114 &5004002296837391680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128797220828547577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
