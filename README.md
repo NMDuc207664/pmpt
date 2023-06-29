@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # pmpt## IT-4883Q_Project_Group8
+=======
+## IT-4883Q_Project_Group8
+>>>>>>> 3f69cb3f0a14808dceaec6c32be6c2aad0a7eeb5
 
 ### Nội dung
 -----
@@ -26,6 +30,7 @@ Một trò chơi đối kháng mang tên Sengoku Showdown
 - HeatlthBar: Mỗi nhân vật có một thanh máu để xác định trạng thái của họ
 - Nhân vật sau khi bị đánh bại sẽ được hồi sinh sau khoảng thời gian nhất định 
 - Có chức năng chọn nhân vật 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 # Project-Margbot
@@ -33,3 +38,5 @@ Một trò chơi đối kháng mang tên Sengoku Showdown
 # testpmpt
 >>>>>>> 5af4c419217fbf9c7320ce8e4eb4b0cf7391cf36
 >>>>>>> 6c8fc666f88b704478b391626bbc739275b3b3af
+=======
+>>>>>>> 3f69cb3f0a14808dceaec6c32be6c2aad0a7eeb5
